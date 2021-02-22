@@ -1,5 +1,5 @@
 # install git
-sudo apt install git
+sudo apt install git -y
 
 # configure git user
 git config --global user.name arorakash
