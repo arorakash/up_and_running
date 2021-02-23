@@ -6,4 +6,3 @@ sudo apt install curl -y;
 
 # install diffuse
 sudo apt install diffuse -y;
-
