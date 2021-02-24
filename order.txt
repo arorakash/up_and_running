@@ -1,0 +1,29 @@
+01 ssh
+
+02 git
+
+03 python pip
+
+04 build tools
+05 tools
+
+06 add environment entries
+
+07 tldr pages globally
+
+08 nodejs
+
+09 chromium
+10 chrome
+11 old_firefox
+
+12 sublime
+13 pycharm
+
+14 ohmyzsh
+
+15 pyenv
+16 add pipenv environment entries
+
+as_and_when
+download_installers

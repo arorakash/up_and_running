@@ -1,3 +1,0 @@
-Get ssh key pairs
-move the key pairs to ~/.ssh/ folder
-

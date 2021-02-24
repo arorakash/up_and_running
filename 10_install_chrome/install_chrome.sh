@@ -1,6 +1,7 @@
 echo ""
+
 # Set Download Directory
-DOWNLOAD_DIRECTORY=/home/`whoami`/setups/browsers/chrome/
+DOWNLOAD_DIRECTORY=$HOME/setups/browsers/chrome/
 echo "downloading installer at "$DOWNLOAD_DIRECTORY
 
 # Download vmware player bundle to Download Directory
