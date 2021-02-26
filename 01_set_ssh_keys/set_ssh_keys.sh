@@ -28,3 +28,4 @@ echo "moved keypair to ~/.ssh/"
 
 # Delete downloaded and extracted data
 rm -rf $DOWNLOAD_DIRECTORY/ssh_keypair*;
+
