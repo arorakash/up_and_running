@@ -6,7 +6,7 @@ echo "ssh_keypair.zip should be present at "$DOWNLOAD_DIRECTORY/
 
 # unzip file
 echo "sigh...unzips"
-unzip $DOWNLOAD_DIRECTORY/ssh_keypair.zip;
+unzip $DOWNLOAD_DIRECTORY/ssh_keypair.zip -d $DOWNLOAD_DIRECTORY;
 echo "unzipped"
 echo ""
 
