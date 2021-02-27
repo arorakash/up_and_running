@@ -28,14 +28,6 @@ sudo mv /opt/pycharm* /opt/pycharm
 echo "renamed"
 echo ""
 
-# Add pycharm entry in .profile
-echo "adding pycharm entry in .profile"
-sudo echo '' >> ~/.profile
-sudo echo 'export PATH=$PATH:/opt/pycharm/bin/' >> ~/.profile
-sudo echo '' >> ~/.profile
-echo "entry added"
-echo ""
-
 # Create symlink in /usr/bin
 echo "creating symlink in /usr/bin"
 sudo ln -s /opt/pycharm/bin/pycharm.sh /usr/bin/pycharm
