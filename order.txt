@@ -1,11 +1,10 @@
 01 ssh
 
-02 git
+02 build tools
+03 tools
 
-03 python pip
-
-04 build tools
-05 tools
+04 git
+05 python pip
 
 06 add environment entries
 
@@ -26,4 +25,5 @@
 16 add pipenv environment entries
 
 as_and_when
-download_installers
+download installers
+
