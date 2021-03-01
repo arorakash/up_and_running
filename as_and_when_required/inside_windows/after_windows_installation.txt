@@ -1,0 +1,10 @@
+
+1. create new volume using disk partition
+
+2. copy winrar, .net 4.5.* and MS Office setups to New Volume
+
+3. install winrar
+
+4. install .net
+
+5. install MS Office
