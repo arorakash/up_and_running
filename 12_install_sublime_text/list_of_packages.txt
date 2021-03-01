@@ -1,0 +1,13 @@
+list_of_packages:
+
+A file icon
+anaconda
+bracket highlighter
+dayle rees color schemes
+emmet
+pretty json
+sidebar enhancements
+sublime codeintel
+sublime linter
+sublime linter-pylint
+zzz a file icon zzz
