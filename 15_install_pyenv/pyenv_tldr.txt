@@ -1,0 +1,77 @@
+# check current python version:
+pyenv version
+pyenv local
+pyenv global
+pyenv which python
+python --version
+cat .python-version
+
+
+
+====================================================================================================
+
+
+
+# list locally availables:
+
+# list locally available python versions:
+pyenv versions
+
+# list locally available virtualenvs:
+pyenv virtualenvs
+
+
+
+====================================================================================================
+
+
+
+# python version and flavour management:
+
+# install new python version:
+pyenv install x.y.z
+
+
+# uninstall python version:
+pyenv uninstall x.y.z (actually delete's python version)
+
+
+
+====================================================================================================
+
+
+
+# virtualenv management:
+
+# create a new virtualenv:
+
+pyenv virtualenv python_version virtual_env_name
+pyenv virtualenv x.y.z venv_genuse
+
+
+# set virtualenv for current project:
+pyenv local venv_genuse
+
+
+# uninstall virtualenv:
+pyenv uninstall venv_genuse (doesn't actually delete virtualenv, just unlinks with current project)
+
+
+# delete virtualenv:
+pyenv virtualenv-delete venv_genuse
+
+
+
+====================================================================================================
+
+
+
+# see a list of what versions can be installed:
+pyenv install --list
+
+
+# If the list does not contain required python version, upgrade pyenv:
+
+# upgrade pyenv:
+cd ~/.pyenv/
+git pull
