@@ -24,8 +24,7 @@ echo ""
 
 # move keypair to target directory
 mv $DOWNLOAD_DIRECTORY/ssh_keypair/* $TARGET_DIRECTORY;
-echo "moved keypair to ~/.ssh/"
+echo "moved keypair to "$TARGET_DIRECTORY
 
 # Delete downloaded and extracted data
 rm -rf $DOWNLOAD_DIRECTORY/ssh_keypair*;
-

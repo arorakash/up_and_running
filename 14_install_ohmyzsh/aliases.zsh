@@ -1,8 +1,10 @@
 # My custom aliases
 
 alias x="exit"
+alias myaliases="cat $HOME/.oh-my-zsh/custom/aliases.zsh;"
 
 alias upd="sudo apt update;"
+alias lupg="apt list --upgradable;"
 alias fupg="sudo apt full-upgrade -y;"
 alias armv="sudo apt auto-remove -y;"
 
