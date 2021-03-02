@@ -1,0 +1,197 @@
+# install pipenv
+pip install pipenv
+
+This will install pipenv in current python version.
+In case the python is from pyenv, the pipenv will get installed in pyenv's python.
+
+
+
+====================================================================================================
+
+
+
+pipenv shell
+
+This will create a virtual environment if one doesn’t already exist.
+
+You can force the creation of a Python 2 or 3 environment with the arguments --two and --three respectively.
+Otherwise, Pipenv will use whatever default virtualenv finds.
+
+
+If you require a more specific version of Python, you can provide a --python argument with the version you require.
+
+pipenv shell --python 3.6
+
+When using with pyenv:
+
+pipenv shell --python=/shim/
+
+
+
+====================================================================================================
+
+
+
+export PIPENV_VENV_IN_PROJECT=1
+
+To create .venv in your project directory instead of the global virtualenv manager pew,
+add this line in ~/.bashrc and ~/.zshrc files.
+
+
+
+====================================================================================================
+
+
+
+pipenv install <package>
+
+This will install the specified package.
+
+pipenv install flask
+OR
+pipenv install flask==0.12.1
+
+
+
+====================================================================================================
+
+
+
+pipenv install <package> --dev
+
+This will install the specified package in dev section.
+
+pipenv install pytest --dev
+
+
+
+====================================================================================================
+
+
+
+pipenv lock
+
+This will create/update your Pipfile.lock, which you’ll never need to (and are never meant to) edit manually.
+You should always use the generated file.
+
+When an exact version isn’t specified in the Pipfile, the install command gives the opportunity for dependencies (and sub-dependencies) to update their versions.
+
+
+
+====================================================================================================
+
+
+
+pipenv install --ignore-pipfile
+
+To install the last successful recoreded environment.
+
+This tells Pipenv to ignore the Pipfile for installation and use what’s in the Pipfile.lock.
+Given this Pipfile.lock, Pipenv will create the exact same environment you had when you ran pipenv lock, sub-dependencies and all.
+
+The lock file enables deterministic builds by taking a snapshot of all the versions of packages in an environment (similar to the result of a pip freeze).
+
+
+
+====================================================================================================
+
+
+
+pipenv graph
+
+To show a dependency graph to understand your top-level dependencies and their sub-dependencies.
+
+
+pipenv graph --reverse
+
+This reversed tree may be more useful when you are trying to figure out conflicting sub-dependencies.
+
+
+
+====================================================================================================
+
+
+
+pipenv run <insert command here>
+
+You can run a command in the virtual environment without launching a shell
+
+
+
+====================================================================================================
+
+
+
+pipenv check
+
+Check for security vulnerabilities (and PEP 508 requirements) in your environment
+
+
+
+====================================================================================================
+
+
+
+pipenv uninstall <package>
+
+This will uninstall the specified package.
+
+
+pipenv uninstall --all
+
+To completely wipe all the installed packages from your virtual environment.
+
+
+pipenv uninstall --all-dev
+
+To completely wipe all the dev packages from your virtual environment.
+
+
+
+====================================================================================================
+
+
+
+pipenv --venv
+
+To find out where your virtual environment is.
+
+
+
+====================================================================================================
+
+
+
+pipenv --where
+
+To find out where your project home is.
+
+
+
+====================================================================================================
+
+
+
+pipenv install -r requirements.txt
+
+To install packages listed in requirements.txt
+
+
+pipenv install -r dev-requirements.txt --dev
+
+To install dev packages listed in dev-requirements.txt
+
+
+
+====================================================================================================
+
+
+
+pipenv lock -r > requirements.txt
+
+To generate requirements.txt from Pipfile.
+
+
+$ pipenv lock -r -d > dev-requirements.txt
+
+To generate dev-requirements.txt from Pipfile.
