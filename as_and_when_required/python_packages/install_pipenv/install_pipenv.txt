@@ -22,9 +22,12 @@ If you require a more specific version of Python, you can provide a --python arg
 
 pipenv shell --python 3.6
 
+
 When using with pyenv:
 
-pipenv shell --python=/shim/
+pipenv shell --python=$HOME/.pyenv/versions/3.9.0/bin/python
+
+pipenv shell --python=$(pyenv which python)
 
 
 
@@ -145,6 +148,11 @@ To completely wipe all the installed packages from your virtual environment.
 pipenv uninstall --all-dev
 
 To completely wipe all the dev packages from your virtual environment.
+
+
+pipenv --rm
+
+To completely remove virtual environment
 
 
 
