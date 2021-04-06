@@ -1,0 +1,22 @@
+winrar
+chrome
+firefox
+git
+libre office
+sumatra pdf
+Persepolis Download manager
+VirtualBox
+pycharm
+sublime text
+vlc
+telegram
+bing wallpaper
+MS teams
+zoom
+
+
+Installed by default:
+
+MS edge
+MS OneDrive
+MS Update Health Tools
