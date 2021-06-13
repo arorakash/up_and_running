@@ -12,3 +12,5 @@ alias commover="cvlc /home/aa/Music/sounds/notification/just-saying-593.mp3 --pl
 
 alias share_current='python3 -m http.server 6006;'
 alias share_home='python3 -m http.server 6006 -d $HOME;'
+
+alias rpyc="find . -not -path './.venv/*' -path '*/__pycache__*' -delete;"
