@@ -1,0 +1,80 @@
+no need for common config.json
+
+
+in the root folder we will have 2 python files and 1 config file
+
+1. download python file
+2. install python file
+
+1. config file
+
+
+1. download python file:
+
+it will set home folder, user folder and download folder
+it will read config file
+
+for every package:
+if needs download is true:
+trigger download function and pass package url, target filename, filepath
+
+in download function we will also check if the target filename is already present. if it is, then we will skip download
+
+we will make download file as importable module in such a way that, the download function is completely independent of rest of the script.
+we can import the download file funciton in installation script, pass it the same arguments, and it will work in install time rather than a separate download time
+
+
+
+2. install python file:
+
+it will set home folder, user folder and download folder
+it will read config file
+
+for every package:
+if needs download is true:
+trigger download function and pass package url, target filename, filepath
+
+
+
+# installation checkpoints
+installation_checkpoints = list()
+
+installation_checkpoints_file = os.path.join(BASE_DIR, 'installation_checkpoints.txt')
+if os.path.exists(super_stable_companies_file):
+    installation_checkpoints = read_txt_to_list
+
+after every installation of package, we will append the key of that package installation step to the installation_checkpoints list and write that list to installation_checkpoints_file.
+
+after every installation of pakage, if the subprocess command returns non success return code, we will halt the script and user will be required to re run it manually
+
+
+schema of config looks like:
+
+[
+"package_1_installation_step_1": {
+    "download": true,
+    "download_url": asdf,
+    "download_filename": asdfasdf,
+},
+"package_1_installation_step_2": {
+    "key": "value"
+}
+
+]
+
+The order of the dicts wrapped up in list in this schema will determine the order of installation.
+
+installation step can also contain a "skip" key, which will determine if this step has to be skipped. We can use this key to skip installation of stuff we don't require
+
+
+every package will have a folder of its own containing the python scripts for each step of installation of that package. It will also contain any extra config files associated with that package. These config files will remain static compared to the root folder config file
+
+
+we will also have to have a file called specific.txt, it will contain package_installation_step ids of only those specific packages that we want to install
+
+cat /etc/os-release | grep ID_LIKE
+
+
+$DISTRIBUTION is 'debian'
+
+$CHANNEL is 'stable', 'dev'
