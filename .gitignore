@@ -1,2 +1,13 @@
 # dev environment files and folders
 .idea/
+
+# Environments
+.env
+.venv
+venv/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
+# project files and folders
+installation_checkpoints.txt
