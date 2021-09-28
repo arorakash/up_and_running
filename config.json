@@ -1,6 +1,7 @@
 [
     {
         "place_ssh_keys": {
+            "skip": true,
             "key_pair_filename": "ssh_keypair.zip"
         }
     },
@@ -124,7 +125,10 @@
     },
     {
         "install_chromium": {
-            "skip": true
+            "skip": true,
+            "chromium": [
+                "chromium-browser"
+            ]
         }
     },
     {
@@ -216,7 +220,7 @@
                 "libffi-dev",
                 "liblzma-dev"
             ],
-            "extra_flags": [
+            "apt_flags": [
                 "--no-install-recommends"
             ]
         }
@@ -284,6 +288,75 @@
                 "behaviour_target": "org.gnome.shell.extensions.dash-to-dock",
                 "behaviour_key": "click-action",
                 "behaviour_value": "minimize-or-previews"
+            }
+        }
+    },
+    {
+        "install_ffmpeg": {
+            "skip": true,
+            "ffmpeg": [
+                "ffmpeg"
+            ]
+        }
+    },
+    {
+        "install_teams": {
+            "skip": true,
+            "download": {
+                "url": "https://go.microsoft.com/fwlink/p/?LinkID=2112886&culture=en-in&country=IN",
+                "download_filename": "ms-teams.deb",
+                "wget_flags": {
+                    "--user-agent": "Mozilla",
+                    "--content-disposition": "",
+                    "--max-redirect": 20
+                }
+            }
+        }
+    },
+    {
+        "install_persepolis": {
+            "ppa": "persepolis/ppa",
+            "persepolis": [
+                "persepolis"
+            ]
+        }
+    },
+    {
+        "install_telegram": {
+            "skip": true,
+            "download": {
+                "url": "https://telegram.org/dl/desktop/linux",
+                "download_filename": "tsetup.tar.xz"
+            }
+        }
+    },
+    {
+        "install_tor": {
+            "tor": [
+                "tor"
+            ]
+        }
+    },
+    {
+        "install_variety": {
+            "variety": [
+                "variety"
+            ]
+        }
+    },
+    {
+        "install_vlc": {
+            "vlc": [
+                "vlc"
+            ]
+        }
+    },
+    {
+        "install_vmware_player": {
+            "skip": true,
+            "download": {
+                "url": "https://download3.vmware.com/software/player/file/VMware-Player-16.1.0-17198959.x86_64.bundle",
+                "download_filename": "vmware-player.bundle"
             }
         }
     }
