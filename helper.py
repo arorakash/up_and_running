@@ -17,7 +17,13 @@ def ensure_dir_exists(dirpath):
         os.makedirs(dirpath)
 
 def execute_subprocess_command(subprocess_command):
-    subprocess_return = subprocess.run(subprocess_command)
+    shell_flag = False
+
+    if type(subprocess_command) in (str,):
+        shell_flag = True
+
+    subprocess_return = subprocess.run(subprocess_command, shell=shell_flag)
+
     return subprocess_return
 
 def get_home_dir():

@@ -10,7 +10,7 @@ sys.path.append(ROOT_DIR)
 import helper
 
 
-def place_ssh_keys(config, common):
+def handler(config, common):
     try:
         download_dir = common['download_dir']
         target_dir = f"{common['home_dir']}/.ssh/"
@@ -26,24 +26,16 @@ def place_ssh_keys(config, common):
                 'unzip',
                 key_pair_file,
                 '-d',
-                target_dir
+                download_dir
             ]
         )
 
-        key_pair_dir = f"{download_dir}/{config['key_pair_filename']}"
+        key_pair_dirname = config['key_pair_filename'].rsplit(".", 1)[0]
+        key_pair_dir = f"{download_dir}/{key_pair_dirname}"
 
         subprocess_command_list.append(
-            [
-                'mv',
-                f"{key_pair_dir}/*",
-                target_dir
-            ]
+            f"cp {key_pair_dir}/* {target_dir}"
         )
-
-        print("yup, we do get executed")
-        raise helper.CustomException("Sample custom error")
-
-        subprocess_command_list = [['echo', 'hello']]
 
         for command in subprocess_command_list:
             command_result = helper.execute_subprocess_command(command)

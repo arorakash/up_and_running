@@ -67,20 +67,15 @@ for step_dict in installation_config:
     if DOWNLOAD_ONLY and 'download' not in config:
         continue
 
+    # dev filter
     if step not in ('place_ssh_keys',):
         continue
 
     install_scripts_dir = config['install_scripts_dir']
 
-    # status, message = exec(install_scripts_dir.step(config, COMMON))
-    exec(f"from {install_scripts_dir} import {step} as istep")
-    # f"istep.{step}(config, COMMON)"
-    exec(f"status, message = istep.{step}(config, COMMON)")
+    exec(f"from {install_scripts_dir}.{step} import handler")
 
-    # status, message = exec(istep.{step}(config, COMMON))
-
-    # from ssh_keys import place_ssh_keys
-    # status, message = place_ssh_keys.place_ssh_keys(config, COMMON)
+    status, message = handler(config, COMMON)
 
     if status:
         installation_checkpoints.append(step)
