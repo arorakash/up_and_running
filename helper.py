@@ -63,6 +63,17 @@ def make_pip_install_command(install_list, flags, sudo=True):
     return " ".join(return_command_components)
 
 
+def make_deb_install_command(deb_filepath, sudo=True):
+    return_command_components = list()
+
+    if sudo:
+        return_command_components.append("sudo")
+
+    return_command_components.extend(["dpkg", "-i", deb_filepath])
+
+    return " ".join(return_command_components)
+
+
 def make_apt_entries_command_list(gpg_url, sources_entry, sources_target_file):
     return_command_list = list()
 
@@ -73,6 +84,35 @@ def make_apt_entries_command_list(gpg_url, sources_entry, sources_target_file):
     return_command_list.append(subprocess_command)
 
     return return_command_list
+
+
+def download_installation_file(url, target_file, flags, re_download, only_download):
+    will_download = True
+
+    if os.path.exists(target_file):
+        if not re_download:
+            will_download = False
+
+    if will_download:
+        subprocess_command = [
+            'wget',
+            url,
+            '-P',
+            target_file,
+        ]
+
+        if flags:
+            for flag_key, flag_value in flags.items():
+                subprocess_command.extend([flag_key, flag_value])
+
+        execute_subprocess_command(subprocess_command)
+
+    if only_download:
+
+        if not will_download:
+            raise CustomException("installation file already exists. skipping installation")
+
+        raise CustomException("installation file downloaded. skipping installation")
 
 
 def make_entry_in_file_command(filepath, entry, sudo=True):

@@ -160,7 +160,7 @@
     },
     {
         "install_chrome": {
-            "install_scripts_dir": "",
+            "install_scripts_dir": "chrome",
             "download": {
                 "url": "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb",
                 "download_filename": "chrome-browser-amd64.deb"
@@ -353,10 +353,10 @@
             "download": {
                 "url": "https://go.microsoft.com/fwlink/p/?LinkID=2112886&culture=en-in&country=IN",
                 "download_filename": "ms-teams.deb",
-                "wget_flags": {
+                "flags": {
                     "--user-agent": "Mozilla",
                     "--content-disposition": "",
-                    "--max-redirect": 20
+                    "--max-redirect": "20"
                 }
             }
         }

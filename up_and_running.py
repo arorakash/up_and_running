@@ -15,15 +15,22 @@ ARG_PARSER.add_argument(
 )
 
 ARG_PARSER.add_argument(
-    '--download-only',
+    '--only-download',
     action='store_true',
     help='only download the installation files'
 )
 
+ARG_PARSER.add_argument(
+    '--re-download',
+    action='store_true',
+    help='re-download the installation files'
+)
+
 ARGS = ARG_PARSER.parse_args()
 
-DOWNLOAD_ONLY = ARGS.download_only
 CONFIG_FROM_ARGS = ARGS.config
+ONLY_DOWNLOAD = ARGS.only_download
+RE_DOWNLOAD = ARGS.re_download
 
 SLEEP_TIME = 2
 
@@ -53,8 +60,11 @@ COMMON = {
     'distribution': DISTRIBUTION,
 }
 
-if DOWNLOAD_ONLY:
-    COMMON['download_only'] = True
+if ONLY_DOWNLOAD:
+    COMMON['only_download'] = True
+
+if RE_DOWNLOAD:
+    COMMON['re_download'] = True
 
 # read config file
 with open(CONFIG_FILEPATH) as fh:
@@ -77,7 +87,7 @@ for step_dict in installation_config:
     if config.get('skip', False):
         continue
 
-    if DOWNLOAD_ONLY and 'download' not in config:
+    if ONLY_DOWNLOAD and 'download' not in config:
         continue
 
     # dev filter
