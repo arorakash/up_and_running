@@ -9,6 +9,12 @@ import helper
 ARG_PARSER = argparse.ArgumentParser(description="Project to get you up and running in seconds")
 
 ARG_PARSER.add_argument(
+    '--config',
+    action='store',
+    help='relative filepath of config file including .json extension'
+)
+
+ARG_PARSER.add_argument(
     '--download-only',
     action='store_true',
     help='only download the installation files'
@@ -17,13 +23,17 @@ ARG_PARSER.add_argument(
 ARGS = ARG_PARSER.parse_args()
 
 DOWNLOAD_ONLY = ARGS.download_only
+CONFIG_FROM_ARGS = ARGS.config
 
 SLEEP_TIME = 2
 
 BASE_DIR = os.path.dirname(os.path.realpath(__file__))
 
-CONFIG_FILENAME = 'config.json'
-CONFIG_FILEPATH = os.path.join(BASE_DIR, CONFIG_FILENAME)
+if CONFIG_FROM_ARGS:
+    CONFIG_FILEPATH = os.path.join(BASE_DIR, CONFIG_FROM_ARGS)
+else:
+    CONFIG_FILENAME = 'config.json'
+    CONFIG_FILEPATH = os.path.join(BASE_DIR, CONFIG_FILENAME)
 
 INSTALLATION_CHECKPOINT_FILENAME = 'installation_checkpoints.txt'
 INSTALLATION_CHECKPOINT_FILEPATH = os.path.join(BASE_DIR, INSTALLATION_CHECKPOINT_FILENAME)

@@ -1,0 +1,409 @@
+[
+    {
+        "place_ssh_keys": {
+            "install_scripts_dir": "ssh_keys",
+            "skip": false,
+            "key_pair_filename": "ssh_keypair.zip"
+        }
+    },
+    {
+        "generate_ssh_keys": {
+            "install_scripts_dir": "ssh_keys",
+            "algorithm": "rsa",
+            "size": 4096,
+            "email": "akash.arora73elearn@gmail.com"
+        }
+    },
+    {
+        "start_ssh_agent": {
+            "install_scripts_dir": "ssh_keys"
+        }
+    },
+    {
+        "add_private_key_to_ssh_agent": {
+            "install_scripts_dir": "ssh_keys",
+            "private_key_filename": "id_rsa"
+        }
+    },
+    {
+        "export_public_ssh_key": {
+            "install_scripts_dir": "ssh_keys",
+            "public_key_filename": "id_rsa.pub",
+            "export_filename": "public_ssh_key.txt"
+        }
+    },
+    {
+        "install_build_tools": {
+            "install_scripts_dir": "",
+            "build_tools": [
+                "gcc",
+                "g++",
+                "make",
+                "apt-transport-https"
+            ]
+        }
+    },
+    {
+        "install_tools": {
+            "install_scripts_dir": "",
+            "tools": [
+                "curl",
+                "net-tools",
+                "meld"
+            ]
+        }
+    },
+    {
+        "install_git": {
+            "install_scripts_dir": "",
+            "git": [
+                "git"
+            ]
+        }
+    },
+    {
+        "configure_git": {
+            "install_scripts_dir": "",
+            "global": {
+                "user.name": "arorakash",
+                "user.email": "akash.arora73elearn@gmail.com",
+                "core.pager": "less -FRX"
+            }
+        }
+    },
+    {
+        "install_python3_pip": {
+            "install_scripts_dir": "",
+            "python3_pip": [
+                "python3-pip"
+            ]
+        }
+    },
+    {
+        "install_python3_dev": {
+            "install_scripts_dir": "",
+            "python3_dev": [
+                "python3-dev"
+            ]
+        }
+    },
+    {
+        "install_python3_venv": {
+            "install_scripts_dir": "",
+            "python3_venv": [
+                "python3-venv"
+            ]
+        }
+    },
+    {
+        "upgrade_pip_setuptools_wheel": {
+            "install_scripts_dir": "",
+            "pip_setuptools_wheel": [
+                "setuptools",
+                "wheel",
+                "pip"
+            ]
+        }
+    },
+    {
+        "add_environment_entries": {
+            "install_scripts_dir": "",
+            ".profile": [
+                "export PATH=$PATH:$HOME/bin/:$HOME/.local/bin/"
+            ]
+        }
+    },
+    {
+        "install_tldr_pages": {
+            "install_scripts_dir": "",
+            "tldr_pages": [
+                "tldr"
+            ]
+        }
+    },
+    {
+        "install_nodejs": {
+            "install_scripts_dir": "",
+            "setup_script_url": "https://deb.nodesource.com/setup_lts.x",
+            "nodejs": [
+                "nodejs"
+            ]
+        }
+    },
+    {
+        "install_yarn": {
+            "install_scripts_dir": "",
+            "gpg_url": "https://dl.yarnpkg.com/$DISTRIBUTION/pubkey.gpg",
+            "sources_entry": "https://dl.yarnpkg.com/$DISTRIBUTION/ $CHANNEL main",
+            "sources_target_file": "/etc/apt/sources.list.d/yarn.list",
+            "yarn": [
+                "yarn"
+            ]
+        }
+    },
+    {
+        "install_chromium": {
+            "install_scripts_dir": "",
+            "skip": true,
+            "chromium": [
+                "chromium-browser"
+            ]
+        }
+    },
+    {
+        "install_chrome": {
+            "install_scripts_dir": "",
+            "download": {
+                "url": "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb",
+                "download_filename": "chrome-browser-amd64.deb"
+            }
+        }
+    },
+    {
+        "install_old_firefox": {
+            "install_scripts_dir": "",
+            "skip": true,
+            "purge": {
+                "purge_packages": [
+                    "firefox"
+                ],
+                "purge_dirs": [
+                    "/usr/bin/firefox",
+                    "~/.mozilla",
+                    "/etc/firefox/",
+                    "/usr/lib/firefox*",
+                    "/opt/firefox/"
+                ]
+            },
+            "download": {
+                "url": "https://ftp.mozilla.org/pub/firefox/releases/52.0/linux-x86_64/en-US/firefox-52.0.tar.bz2",
+                "download_filename": "firefox-52.tar.bz2"
+            }
+        }
+    },
+    {
+        "install_sublime_text": {
+            "install_scripts_dir": "",
+            "gpg_url": "https://download.sublimetext.com/sublimehq-pub.gpg",
+            "sources_entry": "https://download.sublimetext.com/ apt/$CHANNEL/",
+            "sources_target_file": "/etc/apt/sources.list.d/sublime-text.list",
+            "sublime_text": [
+                "sublime-text"
+            ]
+        }
+    },
+    {
+        "install_pycharm": {
+            "install_scripts_dir": "",
+            "download": {
+                "url": "https://download-cf.jetbrains.com/python/pycharm-community-2020.3.3.tar.gz",
+                "download_filename": "pycharm-community.tar.gz"
+            }
+        }
+    },
+    {
+        "install_zsh": {
+            "install_scripts_dir": "",
+            "zsh": [
+                "zsh"
+            ]
+        }
+    },
+    {
+        "set_zsh_as_default_shell": {
+            "install_scripts_dir": ""
+        }
+    },
+    {
+        "install_ohmyzsh": {
+            "install_scripts_dir": "",
+            "setup_script_url": "https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh"
+        }
+    },
+    {
+        "configure_aliases": {
+            "install_scripts_dir": "",
+            "ohmyzsh_custom_dir": "$HOME/.oh-my-zsh/custom/",
+            "aliases_filename": "aliases.zsh"
+        }
+    },
+    {
+        "install_pyenv_dependencies": {
+            "install_scripts_dir": "",
+            "pyenv_dependencies": [
+                "make",
+                "build-essential",
+                "libssl-dev",
+                "zlib1g-dev",
+                "libbz2-dev",
+                "libreadline-dev",
+                "libsqlite3-dev",
+                "wget",
+                "curl",
+                "llvm",
+                "libncurses5-dev",
+                "xz-utils",
+                "tk-dev",
+                "libxml2-dev",
+                "libxmlsec1-dev",
+                "libffi-dev",
+                "liblzma-dev"
+            ],
+            "apt_flags": [
+                "--no-install-recommends"
+            ]
+        }
+    },
+    {
+        "install_pyenv": {
+            "install_scripts_dir": "",
+            "remote_url": "https://github.com/pyenv/pyenv.git",
+            "clone_dir": "$HOME/.pyenv/"
+        }
+    },
+    {
+        "add_pyenv_environment_entries_in_shells_rc": {
+            "install_scripts_dir": "",
+            "shells_rc": [
+                ".bashrc",
+                ".zshrc"
+            ],
+            "entries": [
+                "export PYENV_ROOT=$HOME/.pyenv",
+                "export PATH=$PYENV_ROOT/bin:$PATH"
+            ]
+        }
+    },
+    {
+        "install_pyenv_virtualenv_plugin": {
+            "install_scripts_dir": "",
+            "remote_url": "https://github.com/pyenv/pyenv-virtualenv.git",
+            "clone_dir": "$HOME/.pyenv/plugins/pyenv-virtualenv/"
+        }
+    },
+    {
+        "add_pyenv_virtualenv_environment_entries_in_shells_rc": {
+            "install_scripts_dir": "",
+            "shells_rc": [
+                ".bashrc",
+                ".zshrc"
+            ],
+            "entries": [
+                "if command -v pyenv 1>/dev/null 2>&1; then\n  eval \"$(pyenv init -)\"\n  eval \"$(pyenv virtualenv-init -)\"\nfi"
+            ]
+        }
+    },
+    {
+        "add_pipenv_environment_entries_in_shells_rc": {
+            "install_scripts_dir": "",
+            "shells_rc": [
+                ".bashrc",
+                ".zshrc"
+            ],
+            "entries": [
+                "export PIPENV_VENV_IN_PROJECT=1"
+            ]
+        }
+    },
+    {
+        "install_vscode": {
+            "install_scripts_dir": "",
+            "download": {
+                "url": "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64",
+                "download_filename": "vscode-amd64.deb"
+            }
+        }
+    },
+    {
+        "add_user_to_vboxsf": {
+            "install_scripts_dir": ""
+        }
+    },
+    {
+        "set_gnome_behaviour": {
+            "install_scripts_dir": "",
+            "dash-to-dock": {
+                "behaviour_target": "org.gnome.shell.extensions.dash-to-dock",
+                "behaviour_key": "click-action",
+                "behaviour_value": "minimize-or-previews"
+            }
+        }
+    },
+    {
+        "install_ffmpeg": {
+            "install_scripts_dir": "",
+            "skip": true,
+            "ffmpeg": [
+                "ffmpeg"
+            ]
+        }
+    },
+    {
+        "install_teams": {
+            "install_scripts_dir": "",
+            "skip": true,
+            "download": {
+                "url": "https://go.microsoft.com/fwlink/p/?LinkID=2112886&culture=en-in&country=IN",
+                "download_filename": "ms-teams.deb",
+                "wget_flags": {
+                    "--user-agent": "Mozilla",
+                    "--content-disposition": "",
+                    "--max-redirect": 20
+                }
+            }
+        }
+    },
+    {
+        "install_persepolis": {
+            "install_scripts_dir": "",
+            "ppa": "persepolis/ppa",
+            "persepolis": [
+                "persepolis"
+            ]
+        }
+    },
+    {
+        "install_telegram": {
+            "install_scripts_dir": "",
+            "skip": true,
+            "download": {
+                "url": "https://telegram.org/dl/desktop/linux",
+                "download_filename": "tsetup.tar.xz"
+            }
+        }
+    },
+    {
+        "install_tor": {
+            "install_scripts_dir": "",
+            "tor": [
+                "tor"
+            ]
+        }
+    },
+    {
+        "install_variety": {
+            "install_scripts_dir": "",
+            "variety": [
+                "variety"
+            ]
+        }
+    },
+    {
+        "install_vlc": {
+            "install_scripts_dir": "",
+            "vlc": [
+                "vlc"
+            ]
+        }
+    },
+    {
+        "install_vmware_player": {
+            "install_scripts_dir": "",
+            "skip": true,
+            "download": {
+                "url": "https://download3.vmware.com/software/player/file/VMware-Player-16.1.0-17198959.x86_64.bundle",
+                "download_filename": "vmware-player.bundle"
+            }
+        }
+    }
+]
