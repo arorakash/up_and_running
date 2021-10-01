@@ -97,12 +97,15 @@
     },
     {
         "upgrade_pip_setuptools_wheel": {
-            "install_scripts_dir": "",
-            "pip_setuptools_wheel": [
+            "install_scripts_dir": "python_pip_venv",
+            "pip_install": [
                 "setuptools",
                 "wheel",
                 "pip"
-            ]
+            ],
+            "flags": {
+                "--upgrade": ""
+            }
         }
     },
     {

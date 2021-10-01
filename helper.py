@@ -46,6 +46,22 @@ def make_apt_install_command(install_list, flags, sudo=True):
     return " ".join(return_command_components)
 
 
+def make_pip_install_command(install_list, flags, sudo=True):
+    return_command_components = list()
+
+    if sudo:
+        return_command_components.append("sudo")
+
+    return_command_components.extend(["python3", "-m", "pip", "install"])
+
+    return_command_components.extend(install_list)
+
+    for flag_key, flag_value in flags.items():
+        return_command_components.extend([flag_key, flag_value])
+
+    return " ".join(return_command_components)
+
+
 def get_home_dir():
     return os.environ['HOME']
 
