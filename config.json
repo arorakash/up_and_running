@@ -45,8 +45,8 @@
     },
     {
         "install_tools": {
-            "install_scripts_dir": "",
-            "tools": [
+            "install_scripts_dir": "tools",
+            "apt_install": [
                 "curl",
                 "net-tools",
                 "meld"

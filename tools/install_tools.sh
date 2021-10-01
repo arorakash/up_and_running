@@ -13,7 +13,7 @@ echo "net-tools installed"
 echo ""
 
 # install diffuse
-echo "installing diffuse"
-sudo apt install diffuse -y;
-echo "diffuse installed"
+echo "installing meld"
+sudo apt install meld -y;
+echo "meld installed"
 echo ""
