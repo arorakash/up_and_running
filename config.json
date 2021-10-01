@@ -73,24 +73,24 @@
     },
     {
         "install_python3_pip": {
-            "install_scripts_dir": "",
-            "python3_pip": [
+            "install_scripts_dir": "python_pip_venv",
+            "apt_install": [
                 "python3-pip"
             ]
         }
     },
     {
         "install_python3_dev": {
-            "install_scripts_dir": "",
-            "python3_dev": [
+            "install_scripts_dir": "python_pip_venv",
+            "apt_install": [
                 "python3-dev"
             ]
         }
     },
     {
         "install_python3_venv": {
-            "install_scripts_dir": "",
-            "python3_venv": [
+            "install_scripts_dir": "python_pip_venv",
+            "apt_install": [
                 "python3-venv"
             ]
         }
