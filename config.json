@@ -128,22 +128,25 @@
     },
     {
         "install_nodejs": {
-            "install_scripts_dir": "",
+            "install_scripts_dir": "nodejs",
             "setup_script_url": "https://deb.nodesource.com/setup_lts.x",
-            "nodejs": [
+            "apt_install": [
                 "nodejs"
             ]
         }
     },
     {
         "install_yarn": {
-            "install_scripts_dir": "",
-            "gpg_url": "https://dl.yarnpkg.com/$DISTRIBUTION/pubkey.gpg",
-            "sources_entry": "https://dl.yarnpkg.com/$DISTRIBUTION/ $CHANNEL main",
-            "sources_target_file": "/etc/apt/sources.list.d/yarn.list",
-            "yarn": [
+            "install_scripts_dir": "nodejs",
+            "apt_entries": {
+                "gpg_url": "https://dl.yarnpkg.com/$DISTRIBUTION/pubkey.gpg",
+                "sources_entry": "https://dl.yarnpkg.com/$DISTRIBUTION/ $CHANNEL main",
+                "sources_target_file": "/etc/apt/sources.list.d/yarn.list"
+            },
+            "apt_install": [
                 "yarn"
-            ]
+            ],
+            "channel": "stable"
         }
     },
     {

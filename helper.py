@@ -63,6 +63,18 @@ def make_pip_install_command(install_list, flags, sudo=True):
     return " ".join(return_command_components)
 
 
+def make_apt_entries_command_list(gpg_url, sources_entry, sources_target_file):
+    return_command_list = list()
+
+    subprocess_command = f"wget -qO- {gpg_url} | sudo apt-key add -"
+    return_command_list.append(subprocess_command)
+
+    subprocess_command = f"echo 'deb {sources_entry}' | sudo tee {sources_target_file}"
+    return_command_list.append(subprocess_command)
+
+    return return_command_list
+
+
 def make_entry_in_file_command(filepath, entry, sudo=True):
     sudo_ = str()
 
