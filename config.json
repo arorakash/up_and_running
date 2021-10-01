@@ -34,8 +34,8 @@
     },
     {
         "install_build_tools": {
-            "install_scripts_dir": "",
-            "build_tools": [
+            "install_scripts_dir": "build_tools",
+            "apt_install": [
                 "gcc",
                 "g++",
                 "make",
