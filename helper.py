@@ -56,8 +56,9 @@ def make_pip_install_command(install_list, flags, sudo=True):
 
     return_command_components.extend(install_list)
 
-    for flag_key, flag_value in flags.items():
-        return_command_components.extend([flag_key, flag_value])
+    if flags:
+        for flag_key, flag_value in flags.items():
+            return_command_components.extend([flag_key, flag_value])
 
     return " ".join(return_command_components)
 

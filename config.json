@@ -119,9 +119,9 @@
         }
     },
     {
-        "install_tldr_pages": {
-            "install_scripts_dir": "",
-            "tldr_pages": [
+        "install_python_packages": {
+            "install_scripts_dir": "python_packages",
+            "pip_install": [
                 "tldr"
             ]
         }
