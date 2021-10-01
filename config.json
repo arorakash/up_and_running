@@ -151,9 +151,9 @@
     },
     {
         "install_chromium": {
-            "install_scripts_dir": "",
+            "install_scripts_dir": "chromium",
             "skip": true,
-            "chromium": [
+            "apt_install": [
                 "chromium-browser"
             ]
         }

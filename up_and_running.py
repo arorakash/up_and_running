@@ -44,10 +44,13 @@ DOWNLOADS_DIRNAME = 'Downloads'
 DOWNLOADS_DIR = os.path.join(HOME_DIR, DOWNLOADS_DIRNAME)
 # DOWNLOADS_DIR = f"{HOME_DIR}/{DOWNLOADS_DIR}"
 
+DISTRIBUTION = 'debian'
+
 COMMON = {
     'home_dir': HOME_DIR,
     'download_dir': DOWNLOADS_DIR,
     'sleep_time': SLEEP_TIME,
+    'distribution': DISTRIBUTION,
 }
 
 if DOWNLOAD_ONLY:
