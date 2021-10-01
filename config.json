@@ -55,15 +55,15 @@
     },
     {
         "install_git": {
-            "install_scripts_dir": "",
-            "git": [
+            "install_scripts_dir": "git",
+            "apt_install": [
                 "git"
             ]
         }
     },
     {
         "configure_git": {
-            "install_scripts_dir": "",
+            "install_scripts_dir": "git",
             "global": {
                 "user.name": "arorakash",
                 "user.email": "akash.arora73elearn@gmail.com",
