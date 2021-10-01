@@ -62,6 +62,14 @@ def make_pip_install_command(install_list, flags, sudo=True):
     return " ".join(return_command_components)
 
 
+def make_entry_in_file_command(filepath, entry, sudo=True):
+    sudo_ = str()
+
+    if sudo:
+        sudo_ = "sudo "
+
+    return f"{sudo_}echo '{entry}' >> {filepath}"
+
 def get_home_dir():
     return os.environ['HOME']
 
