@@ -220,7 +220,7 @@
     },
     {
         "set_zsh_as_default_shell": {
-            "install_scripts_dir": ""
+            "install_scripts_dir": "zsh"
         }
     },
     {
