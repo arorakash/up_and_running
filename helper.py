@@ -46,6 +46,21 @@ def make_apt_install_command(install_list, flags, sudo=True):
     return " ".join(return_command_components)
 
 
+def make_apt_purge_command(purge_list, flags, sudo=True):
+    return_command_components = list()
+
+    if sudo:
+        return_command_components.append("sudo")
+
+    return_command_components.extend(["apt", "purge"])
+
+    return_command_components.extend(install_list)
+
+    return_command_components.append("-y")
+
+    return " ".join(return_command_components)
+
+
 def make_pip_install_command(install_list, flags, sudo=True):
     return_command_components = list()
 
@@ -113,6 +128,39 @@ def download_installation_file(url, target_file, flags, re_download, only_downlo
             raise CustomException("installation file already exists. skipping installation")
 
         raise CustomException("installation file downloaded. skipping installation")
+
+
+def make_purge_dirs_command_list(purge_dirs, sudo=True):
+    sudo_ = str()
+    if sudo:
+        sudo_ = "sudo "
+
+    return_command_list = list()
+    for dir_ in purge_dirs:
+        return_command_list.append(
+            f"{sudo_}rm -rf {dir_}"
+        )
+
+    return return_command_list
+
+
+def make_uncompress_command(filepath, uncompress_location, sudo=True):
+    return_command_components = list()
+
+    return_command_components.append('sudo')
+
+    if filepath.endswith('tar.bz2'):
+        return_command_components.append(['tar', '-xjvf', filepath, '-C', 'uncompress_location'])
+
+    return " ".join(return_command_components)
+
+
+def make_link_command(link_this, to_this, sudo=True):
+    sudo_ = str()
+    if sudo:
+        sudo_ = "sudo "
+
+    return f"{sudo_}ln -s {link_this} {to_this}"
 
 
 def make_entry_in_file_command(filepath, entry, sudo=True):

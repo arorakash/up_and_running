@@ -171,18 +171,16 @@
         "install_old_firefox": {
             "install_scripts_dir": "",
             "skip": true,
-            "purge": {
-                "purge_packages": [
-                    "firefox"
-                ],
-                "purge_dirs": [
-                    "/usr/bin/firefox",
-                    "~/.mozilla",
-                    "/etc/firefox/",
-                    "/usr/lib/firefox*",
-                    "/opt/firefox/"
-                ]
-            },
+            "apt_purge": [
+                "firefox"
+            ],
+            "purge_dirs": [
+                "/usr/bin/firefox",
+                "~/.mozilla",
+                "/etc/firefox/",
+                "/usr/lib/firefox*",
+                "/opt/firefox/"
+            ],
             "download": {
                 "url": "https://ftp.mozilla.org/pub/firefox/releases/52.0/linux-x86_64/en-US/firefox-52.0.tar.bz2",
                 "download_filename": "firefox-52.tar.bz2"
