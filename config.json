@@ -225,13 +225,13 @@
     },
     {
         "install_ohmyzsh": {
-            "install_scripts_dir": "",
+            "install_scripts_dir": "ohmyzsh",
             "setup_script_url": "https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh"
         }
     },
     {
         "configure_aliases": {
-            "install_scripts_dir": "",
+            "install_scripts_dir": "ohmyzsh",
             "ohmyzsh_custom_dir": "$HOME/.oh-my-zsh/custom/",
             "aliases_filename": "aliases.zsh"
         }
