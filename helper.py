@@ -155,6 +155,14 @@ def make_uncompress_command(filepath, uncompress_location, sudo=True):
     return " ".join(return_command_components)
 
 
+def make_dir_rename_command(dir_selector, target_name, sudo=True):
+    sudo_ = str()
+    if sudo:
+        sudo_ = 'sudo '
+
+    return f"{sudo_}mv {dir_selector} {target_name}"
+
+
 def make_link_command(link_this, to_this, sudo=True):
     sudo_ = str()
     if sudo:

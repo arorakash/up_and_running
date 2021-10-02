@@ -43,6 +43,13 @@ def handler(config, common):
         )
         subprocess_command_list.append(subprocess_command)
 
+        subprocess_command = helper.make_dir_rename_command(
+            dir_selector='/opt/firefox*',
+            target_name='/opt/firefox',
+            sudo=True
+        )
+        subprocess_command_list.append(subprocess_command)
+
         subprocess_command = helper.make_link_command(
             link_this='/opt/firefox/firefox',
             to_this='/usr/bin/firefox'
