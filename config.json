@@ -203,7 +203,7 @@
     },
     {
         "install_pycharm": {
-            "install_scripts_dir": "",
+            "install_scripts_dir": "pycharm",
             "download": {
                 "url": "https://download-cf.jetbrains.com/python/pycharm-community-2020.3.3.tar.gz",
                 "download_filename": "pycharm-community.tar.gz"
