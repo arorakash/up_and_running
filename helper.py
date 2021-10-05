@@ -4,8 +4,14 @@ import subprocess
 
 
 def read_file_to_list(filepath):
+    return_list = list()
+
     with open(filepath) as fh:
-        return [line.strip() for line in fh.readlines()]
+        for line in fh.readlines():
+            if line.strip():
+                return_list.append(line.strip())
+
+    return return_list
 
 
 def write_list_to_file(list_, filepath):
