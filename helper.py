@@ -193,6 +193,7 @@ def make_entry_in_file_command(filepath, entry, sudo=True):
 
     return f"{sudo_}echo '{entry}' >> {filepath}"
 
+
 def get_home_dir():
     return os.environ['HOME']
 

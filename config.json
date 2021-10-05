@@ -287,20 +287,20 @@
     },
     {
         "install_pyenv_virtualenv_plugin": {
-            "install_scripts_dir": "",
-            "remote_url": "https://github.com/pyenv/pyenv-virtualenv.git",
+            "install_scripts_dir": "pyenv",
+            "remote": "https://github.com/pyenv/pyenv-virtualenv.git",
             "clone_dir": "$HOME/.pyenv/plugins/pyenv-virtualenv/"
         }
     },
     {
         "add_pyenv_virtualenv_environment_entries_in_shells_rc": {
-            "install_scripts_dir": "",
+            "install_scripts_dir": "pyenv",
             "shells_rc": [
                 ".bashrc",
                 ".zshrc"
             ],
             "entries": [
-                "if command -v pyenv 1>/dev/null 2>&1; then\n  eval \"$(pyenv init -)\"\n  eval \"$(pyenv virtualenv-init -)\"\nfi"
+                "eval \"$(pyenv virtualenv-init -)\""
             ]
         }
     },
