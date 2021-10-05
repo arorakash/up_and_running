@@ -89,6 +89,17 @@ def make_deb_install_command(deb_filepath, sudo=True):
     return " ".join(return_command_components)
 
 
+def create_git_clone_command(git_remote, clone_dir, sudo=False):
+    return_command_components = list()
+
+    if sudo:
+        return_command_components.append("sudo")
+
+    return_command_components.extend(["git", "clone", git_remote, clone_dir])
+
+    return " ".join(return_command_components)
+
+
 def make_apt_entries_command_list(gpg_url, sources_entry, sources_target_file):
     return_command_list = list()
 

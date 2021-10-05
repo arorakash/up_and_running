@@ -238,8 +238,8 @@
     },
     {
         "install_pyenv_dependencies": {
-            "install_scripts_dir": "",
-            "pyenv_dependencies": [
+            "install_scripts_dir": "pyenv",
+            "apt_install": [
                 "make",
                 "build-essential",
                 "libssl-dev",
@@ -258,15 +258,15 @@
                 "libffi-dev",
                 "liblzma-dev"
             ],
-            "apt_flags": [
+            "flags": [
                 "--no-install-recommends"
             ]
         }
     },
     {
         "install_pyenv": {
-            "install_scripts_dir": "",
-            "remote_url": "https://github.com/pyenv/pyenv.git",
+            "install_scripts_dir": "pyenv",
+            "remote": "https://github.com/pyenv/pyenv.git",
             "clone_dir": "$HOME/.pyenv/"
         }
     },
