@@ -306,7 +306,7 @@
     },
     {
         "add_pipenv_environment_entries_in_shells_rc": {
-            "install_scripts_dir": "",
+            "install_scripts_dir": "pipenv",
             "shells_rc": [
                 ".bashrc",
                 ".zshrc"
