@@ -191,6 +191,14 @@ def make_dir_rename_command(dir_selector, target_name, sudo=True):
     return f"{sudo_}mv {dir_selector} {target_name}"
 
 
+def make_file_executable_command(filepath):
+    sudo_ = str()
+    if sudo:
+        sudo_ = 'sudo '
+
+    return f"{sudo_}chmod a+x {filepath}"
+
+
 def make_link_command(link_this, to_this, sudo=True):
     sudo_ = str()
     if sudo:

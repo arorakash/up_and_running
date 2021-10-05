@@ -380,7 +380,7 @@
     },
     {
         "install_vmware_player": {
-            "install_scripts_dir": "",
+            "install_scripts_dir": "vmware_player",
             "skip": true,
             "download": {
                 "url": "https://download3.vmware.com/software/player/file/VMware-Player-16.1.0-17198959.x86_64.bundle",
