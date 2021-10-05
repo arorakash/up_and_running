@@ -13,25 +13,25 @@ import helper
 def handler(config, common):
     try:
         home_dir = common['home_dir']
-        file_entries_mapping = config['file_entries_mapping']
 
         subprocess_command_list = list()
-        for file_, entries in file_entries_mapping.items():
-            for entry in entries:
+
+        for rc_filename in config['shells_rc']:
+            rc_filepath = os.path.join(home_dir, rc_filename)
+
+            for entry in config['entries']:
                 subprocess_command = helper.make_entry_in_file_command(
-                    filepath=f"{home_dir}/{file_}",
+                    filepath=rc_filepath,
                     entry = "",
                     sudo=False
                 )
-
                 subprocess_command_list.append(subprocess_command)
 
                 subprocess_command = helper.make_entry_in_file_command(
-                    filepath=f"{home_dir}/{file_}",
+                    filepath=rc_filepath,
                     entry = entry,
                     sudo=False
                 )
-
                 subprocess_command_list.append(subprocess_command)
 
         for command in subprocess_command_list:

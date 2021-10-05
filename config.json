@@ -272,14 +272,16 @@
     },
     {
         "add_pyenv_environment_entries_in_shells_rc": {
-            "install_scripts_dir": "",
+            "install_scripts_dir": "pyenv",
             "shells_rc": [
                 ".bashrc",
                 ".zshrc"
             ],
             "entries": [
                 "export PYENV_ROOT=$HOME/.pyenv",
-                "export PATH=$PYENV_ROOT/bin:$PATH"
+                "export PATH=$PYENV_ROOT/bin:$PATH",
+                "eval \"$(pyenv init --path)\"",
+                "eval \"$(pyenv init -)\""
             ]
         }
     },
