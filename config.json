@@ -355,7 +355,7 @@
     },
     {
         "install_telegram": {
-            "install_scripts_dir": "",
+            "install_scripts_dir": "telegram",
             "skip": true,
             "download": {
                 "url": "https://telegram.org/dl/desktop/linux",

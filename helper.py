@@ -172,10 +172,13 @@ def make_uncompress_command(filepath, uncompress_location, sudo=True):
     return_command_components.append('sudo')
 
     if filepath.endswith('tar.bz2'):
-        return_command_components.append(['tar', '-xjvf', filepath, '-C', 'uncompress_location'])
+        return_command_components.append(['tar', '-xjvf', filepath, '-C', uncompress_location])
 
     if filepath.endswith('tar.gz'):
-        return_command_components.append(['tar', '-xzvf', filepath, '-C', 'uncompress_location'])
+        return_command_components.append(['tar', '-xzvf', filepath, '-C', uncompress_location])
+
+    if filepath.endswith('tar.xz'):
+        return_command_components.append(['tar', '-xvf', filepath, '-C', uncompress_location])
 
     return " ".join(return_command_components)
 
