@@ -110,6 +110,8 @@ for step_dict in installation_config:
 
     if status:
         installation_checkpoints.append(step)
+        if 'requires_restart' in config:
+            helper.execute_subprocess_command('shutdown -r now')
     else:
         sys.exit()
 

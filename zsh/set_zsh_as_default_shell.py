@@ -14,6 +14,7 @@ def handler(config, common):
     try:
         subprocess_command = 'sudo chsh -s $(which zsh)'
 
+        subprocess_command_list = list()
         subprocess_command_list.append(subprocess_command)
 
         for command in subprocess_command_list:

@@ -15,7 +15,7 @@ def handler(config, common):
         subprocess_command_list = list()
 
         setup_script_url = config['setup_script_url']
-        subprocess_command = f"wget -qO- {setup_script_url} | sh -c "
+        subprocess_command = f'sh -c "$(wget -O- {setup_script_url})"'
         subprocess_command_list.append(subprocess_command)
 
         for command in subprocess_command_list:
