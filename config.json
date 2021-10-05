@@ -345,12 +345,22 @@
         }
     },
     {
-        "install_ffmpeg": {
+        "install_persepolis": {
+            "install_scripts_dir": "persepolis",
+            "ppa": "persepolis/ppa",
+            "apt_install": [
+                "persepolis"
+            ]
+        }
+    },
+    {
+        "install_telegram": {
             "install_scripts_dir": "",
             "skip": true,
-            "ffmpeg": [
-                "ffmpeg"
-            ]
+            "download": {
+                "url": "https://telegram.org/dl/desktop/linux",
+                "download_filename": "tsetup.tar.xz"
+            }
         }
     },
     {
@@ -369,49 +379,6 @@
         }
     },
     {
-        "install_persepolis": {
-            "install_scripts_dir": "",
-            "ppa": "persepolis/ppa",
-            "persepolis": [
-                "persepolis"
-            ]
-        }
-    },
-    {
-        "install_telegram": {
-            "install_scripts_dir": "",
-            "skip": true,
-            "download": {
-                "url": "https://telegram.org/dl/desktop/linux",
-                "download_filename": "tsetup.tar.xz"
-            }
-        }
-    },
-    {
-        "install_tor": {
-            "install_scripts_dir": "",
-            "tor": [
-                "tor"
-            ]
-        }
-    },
-    {
-        "install_variety": {
-            "install_scripts_dir": "",
-            "variety": [
-                "variety"
-            ]
-        }
-    },
-    {
-        "install_vlc": {
-            "install_scripts_dir": "",
-            "vlc": [
-                "vlc"
-            ]
-        }
-    },
-    {
         "install_vmware_player": {
             "install_scripts_dir": "",
             "skip": true,
@@ -419,6 +386,18 @@
                 "url": "https://download3.vmware.com/software/player/file/VMware-Player-16.1.0-17198959.x86_64.bundle",
                 "download_filename": "vmware-player.bundle"
             }
+        }
+    },
+    {
+        "install_other_apt_packages": {
+            "install_scripts_dir": "other_apt_packages",
+            "skip": true,
+            "apt_install": [
+                "ffmpeg",
+                "tor",
+                "variety",
+                "vlc"
+            ]
         }
     }
 ]

@@ -112,6 +112,17 @@ def make_apt_entries_command_list(gpg_url, sources_entry, sources_target_file):
     return return_command_list
 
 
+def make_add_apt_repository_command(ppa, sudo=True):
+    return_command_components = list()
+
+    if sudo:
+        return_command_components.append("sudo")
+
+    return_command_components.extend(["add-apt-repository", f"ppa:{ppa}"])
+
+    return " ".join(return_command_components)
+
+
 def download_installation_file(url, target_file, flags, re_download, only_download):
     will_download = True
 
