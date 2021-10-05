@@ -318,7 +318,7 @@
     },
     {
         "install_vscode": {
-            "install_scripts_dir": "",
+            "install_scripts_dir": "vscode",
             "download": {
                 "url": "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64",
                 "download_filename": "vscode-amd64.deb"
