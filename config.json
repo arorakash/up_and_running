@@ -334,12 +334,14 @@
     },
     {
         "set_gnome_behaviour": {
-            "install_scripts_dir": "",
-            "dash-to-dock": {
-                "behaviour_target": "org.gnome.shell.extensions.dash-to-dock",
-                "behaviour_key": "click-action",
-                "behaviour_value": "minimize-or-previews"
-            }
+            "install_scripts_dir": "gnome_settings",
+            "behaviours": [
+                {
+                    "behaviour_target": "org.gnome.shell.extensions.dash-to-dock",
+                    "behaviour_key": "click-action",
+                    "behaviour_value": "minimize-or-previews"
+                }
+            ]
         }
     },
     {
