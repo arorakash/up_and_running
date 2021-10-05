@@ -45,6 +45,9 @@ else:
 INSTALLATION_CHECKPOINT_FILENAME = 'installation_checkpoints.txt'
 INSTALLATION_CHECKPOINT_FILEPATH = os.path.join(BASE_DIR, INSTALLATION_CHECKPOINT_FILENAME)
 
+STUFF_TO_INSTALL_FILENAME = 'stuff_to_install.txt'
+STUFF_TO_INSTALL_FILEPATH = os.path.join(BASE_DIR, STUFF_TO_INSTALL_FILENAME)
+
 HOME_DIR = helper.get_home_dir()
 
 DOWNLOADS_DIRNAME = 'Downloads'
@@ -72,11 +75,14 @@ with open(CONFIG_FILEPATH) as fh:
 
 # installation checkpoints
 installation_checkpoints = list()
-
 if os.path.exists(INSTALLATION_CHECKPOINT_FILEPATH):
     installation_checkpoints = helper.read_file_to_list(INSTALLATION_CHECKPOINT_FILEPATH)
 
-# for step, config in installation_config.items():
+# stuff_to_install
+stuff_to_install = list()
+if os.path.exists(STUFF_TO_INSTALL_FILEPATH):
+    stuff_to_install = helper.read_file_to_list(STUFF_TO_INSTALL_FILEPATH)
+
 for step_dict in installation_config:
     step = list(step_dict.keys())[0]
     config = list(step_dict.values())[0]
@@ -90,8 +96,7 @@ for step_dict in installation_config:
     if ONLY_DOWNLOAD and 'download' not in config:
         continue
 
-    # dev filter
-    if step not in ('place_ssh_keys',):
+    if stuff_to_install and step not in stuff_to_install:
         continue
 
     install_scripts_dir = config['install_scripts_dir']

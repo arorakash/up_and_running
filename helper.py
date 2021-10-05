@@ -3,6 +3,11 @@ import time
 import subprocess
 
 
+def ensure_dir_exists(dirpath):
+    if not os.path.exists(dirpath):
+        os.makedirs(dirpath)
+
+
 def read_file_to_list(filepath):
     return_list = list()
 
@@ -19,11 +24,6 @@ def write_list_to_file(list_, filepath):
         for item in list_:
             fh.write(item)
             fh.write(os.linesep)
-
-
-def ensure_dir_exists(dirpath):
-    if not os.path.exists(dirpath):
-        os.makedirs(dirpath)
 
 
 def execute_subprocess_command(subprocess_command):
