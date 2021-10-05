@@ -365,7 +365,7 @@
     },
     {
         "install_teams": {
-            "install_scripts_dir": "",
+            "install_scripts_dir": "teams",
             "skip": true,
             "download": {
                 "url": "https://go.microsoft.com/fwlink/p/?LinkID=2112886&culture=en-in&country=IN",
