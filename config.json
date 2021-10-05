@@ -10,7 +10,7 @@
         "generate_ssh_keys": {
             "install_scripts_dir": "ssh_keys",
             "algorithm": "rsa",
-            "size": 4096,
+            "size": "4096",
             "email": "akash.arora73elearn@gmail.com"
         }
     },

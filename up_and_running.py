@@ -1,4 +1,5 @@
 import os
+import sys
 import time
 import json
 import argparse
@@ -105,10 +106,12 @@ for step_dict in installation_config:
 
     status, message = handler(config, COMMON)
 
+    print(message)
+
     if status:
         installation_checkpoints.append(step)
-
-    print(message)
+    else:
+        sys.exit()
 
     helper.write_list_to_file(installation_checkpoints, INSTALLATION_CHECKPOINT_FILEPATH)
 
