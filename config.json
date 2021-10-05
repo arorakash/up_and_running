@@ -326,8 +326,10 @@
         }
     },
     {
-        "add_user_to_vboxsf": {
-            "install_scripts_dir": ""
+        "add_user_to_group": {
+            "install_scripts_dir": "vbox_settings",
+            "user": "$USER",
+            "group": "vboxsf"
         }
     },
     {
