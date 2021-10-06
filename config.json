@@ -347,7 +347,7 @@
     },
     {
         "install_persepolis": {
-            "install_scripts_dir": "persepolis",
+            "install_scripts_dir": "persepolis_download_manager",
             "ppa": "persepolis/ppa",
             "apt_install": [
                 "persepolis"

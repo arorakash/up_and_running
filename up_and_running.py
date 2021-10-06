@@ -104,9 +104,15 @@ for step_dict in installation_config:
 
     exec(f"from {install_scripts_dir}.{step} import handler")
 
+    print(f"running step:{step}", "\n")
     status, message = handler(config, COMMON)
+    print(f"ran step:{step}", "\n")
 
     print(message)
+
+    print("\n"*2)
+    print("#"*100)
+    print("\n"*2)
 
     if status:
         installation_checkpoints.append(step)
