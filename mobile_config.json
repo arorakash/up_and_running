@@ -13,7 +13,8 @@
                 "unzip",
                 "openssh-client",
                 "wget",
-                "nano"
+                "nano",
+                "bash-completion"
             ]
         }
     },
