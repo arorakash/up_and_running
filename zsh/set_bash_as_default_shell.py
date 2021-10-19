@@ -12,7 +12,7 @@ import helper
 
 def handler(config, common):
     try:
-        subprocess_command = 'sudo chsh -s $(which bash)'
+        subprocess_command = 'chsh -s $(which bash)'
 
         subprocess_command_list = list()
         subprocess_command_list.append(subprocess_command)
