@@ -12,7 +12,8 @@
                 "zip",
                 "unzip",
                 "openssh-client",
-                "wget"
+                "wget",
+                "nano"
             ]
         }
     },
@@ -30,7 +31,7 @@
     {
         "place_ssh_keys": {
             "install_scripts_dir": "ssh_keys",
-            "skip": false,
+            "skip": true,
             "key_pair_filename": "ssh_keypair.zip"
         }
     },
