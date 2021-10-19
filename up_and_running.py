@@ -117,9 +117,14 @@ for step_dict in installation_config:
     if status:
         installation_checkpoints.append(step)
         if 'requires_restart' in config:
+            helper.write_list_to_file(installation_checkpoints, INSTALLATION_CHECKPOINT_FILEPATH)
             helper.execute_subprocess_command('shutdown -r now')
+            sys.exit()
     else:
-        sys.exit()
+        if ONLY_DOWNLOAD and 'skipping' in message:
+            pass
+        else:
+            sys.exit()
 
     helper.write_list_to_file(installation_checkpoints, INSTALLATION_CHECKPOINT_FILEPATH)
 
