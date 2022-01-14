@@ -327,6 +327,19 @@
         }
     },
     {
+        "install_postman": {
+            "install_scripts_dir": "postman",
+            "download": {
+                "url": "https://dl.pstmn.io/download/latest/linux64",
+                "download_filename": "postman-linux.tar.gz"
+            },
+            "desktop_entry": {
+                "desktop_entry_filename": "postman.desktop",
+                "desktop_entry_target_dir": "$HOME/.local/share/applications/"
+            }
+        }
+    },
+    {
         "add_user_to_group": {
             "install_scripts_dir": "vbox_settings",
             "user": "$USER",
