@@ -1,0 +1,90 @@
+
+Global:
+
+General:
+
+enable menu accelerator key
+
+theme varian: light
+open new terminals in Tab
+New tab position: Next
+
+Shortcuts:
+
+Enable Shortcuts
+
+
+
+Profiles:
+
+default:
+
+Text:
+
+initial terminal size: 90 cols 30 rows
+
+custome font checked: Ubuntu Mono Regular 13
+
+cell spacing: 1.00 width x 1.00 height
+
+allow blinking text: always
+
+curstor shape: I-Beam
+cursor blinking: default
+
+sound: terminal bell
+
+
+Colors:
+
+Use colors from system theme: Unchecked
+
+Built-in Schemes: Custom
+
+Default color:
+Text: #2E3436
+Background: #FCFCFC
+
+Bold color: checked: #000000
+
+Cursor color: checked:
+Text color: #FFFFFF
+Background: #000000
+
+Hightlight color: unchecked
+
+Use transparency from system theme: Unchecked
+
+Palette:
+
+Built-in Schemes: Tango
+
+
+Scrolling:
+
+show scrollbar: checked
+scroll on output: unchecked
+scroll on keystroke: checked
+limit scrollback to: checked, 10k
+
+
+
+Command:
+
+run command as a login shell: unchecked
+run a custom command instead of my shell: unchecked
+
+preserve working dir: shell only
+when command exits: exit the terminal
+
+
+
+Compatibility:
+
+backspace key generates: ASCII DEL
+delete key generates: escape sequence
+Encoding: Unicode UTF-8
+Ambiguous width characters: Narrow
+
+
+
