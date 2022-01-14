@@ -30,20 +30,20 @@ def handler(config, common):
             filepath=download_filepath,
             uncompress_location='/opt/'
         )
-        # subprocess_command_list.append(subprocess_command)
+        subprocess_command_list.append(subprocess_command)
 
         subprocess_command = helper.make_dir_rename_command(
             dir_selector='/opt/Postman*',
             target_name='/opt/postman',
             sudo=True
         )
-        # subprocess_command_list.append(subprocess_command)
+        subprocess_command_list.append(subprocess_command)
 
         subprocess_command = helper.make_link_command(
             link_this='/opt/postman/app/Postman',
             to_this='/usr/bin/postman'
         )
-        # subprocess_command_list.append(subprocess_command)
+        subprocess_command_list.append(subprocess_command)
 
         desktop_entry_filepath = os.path.join(BASE_DIR, config['desktop_entry']['desktop_entry_filename'])
         target_dir = config['desktop_entry']['desktop_entry_target_dir']
