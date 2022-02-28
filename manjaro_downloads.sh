@@ -214,7 +214,7 @@ sleep $SLEEP_TIME;
 echo ""
 echo ""
 echo "downloading google chrome"
-yay --getpkgbuild google-chrome --noconfirm;
+# yay -Sw google-chrome --noconfirm;
 echo "google chrome downloaded"
 echo ""
 echo ""
@@ -231,7 +231,7 @@ sleep $SLEEP_TIME;
 echo ""
 echo ""
 echo "downloading sublime text 4"
-yay --getpkgbuild sublime-text-4 --noconfirm;
+# yay -Sw sublime-text-4 --noconfirm;
 echo "sublime text 4 downloaded"
 echo ""
 echo ""
@@ -248,7 +248,7 @@ sleep $SLEEP_TIME;
 echo ""
 echo ""
 echo "downloading pycharm community"
-yay --getpkgbuild pycharm-community-edition --noconfirm;
+# yay -Sw pycharm-community-edition --noconfirm;
 echo "pycharm community downloaded"
 echo ""
 echo ""
@@ -303,7 +303,7 @@ sleep $SLEEP_TIME;
 echo ""
 echo ""
 echo "downloading vscode"
-yay --getpkgbuild vscode --noconfirm;
+# yay -Sw vscode --noconfirm;
 echo "vscode downloaded"
 echo ""
 echo ""
@@ -320,7 +320,7 @@ sleep $SLEEP_TIME;
 echo ""
 echo ""
 echo "downloading postman"
-yay --getpkgbuild postman --noconfirm;
+# yay -Sw postman --noconfirm;
 echo "postman downloaded"
 echo ""
 echo ""
@@ -368,7 +368,7 @@ sleep $SLEEP_TIME;
 echo ""
 echo ""
 echo "downloading ms teams"
-yay --getpkgbuild teams --noconfirm;
+# yay -Sw teams --noconfirm;
 echo "ms teams downloaded"
 echo ""
 echo ""
