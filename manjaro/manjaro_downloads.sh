@@ -178,22 +178,6 @@ sleep $SLEEP_TIME;
 
 
 
-# install_python_packages
-echo ""
-echo ""
-echo "downloading tldr"
-python3 -m pip install tldr
-echo "tldr downloaded"
-echo ""
-echo ""
-sleep $SLEEP_TIME;
-
-
-
-####################################################################################################
-
-
-
 # install_chromium
 echo ""
 echo ""
