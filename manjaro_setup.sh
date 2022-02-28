@@ -2,45 +2,47 @@
 ####################################################################################################
 
 
+
 SLEEP_TIME=3;
+
 
 
 ####################################################################################################
 
 
 
-# generic package management
-echo ""
-echo ""
-echo "updating package databases"
-sudo pacman -Syy;
-echo "package databases updated"
-echo ""
-echo ""
-sleep $SLEEP_TIME;
+# # generic package management
+# echo ""
+# echo ""
+# echo "updating package databases"
+# sudo pacman -Syy;
+# echo "package databases updated"
+# echo ""
+# echo ""
+# sleep $SLEEP_TIME;
 
-# Upgrade Packages
-echo ""
-echo ""
-echo "updating packages"
-sudo pacman -Syu --noconfirm;
-echo "packages updated"
-echo ""
-echo ""
-sleep $SLEEP_TIME;
+# # Upgrade Packages
+# echo ""
+# echo ""
+# echo "updating packages"
+# sudo pacman -Syu --noconfirm;
+# echo "packages updated"
+# echo ""
+# echo ""
+# sleep $SLEEP_TIME;
 
-# Clean up all local caches.
-echo ""
-echo ""
-echo "cleaning local caches"
-sudo pacman -Sc --noconfirm;
-echo "local caches cleaned"
-echo ""
-echo ""
-sleep $SLEEP_TIME;
+# # Clean up all local caches.
+# echo ""
+# echo ""
+# echo "cleaning local caches"
+# sudo pacman -Sc --noconfirm;
+# echo "local caches cleaned"
+# echo ""
+# echo ""
+# sleep $SLEEP_TIME;
 
-# Remove dependencies that are no longer needed
-# sudo pacman -Qdtq | sudo pacman -Rs -
+# # Remove dependencies that are no longer needed
+# # sudo pacman -Qdtq | sudo pacman -Rs -
 
 
 
@@ -280,7 +282,7 @@ sleep $SLEEP_TIME;
 echo ""
 echo ""
 echo "installing google chrome"
-yay -S google-chrome;
+yay -S google-chrome --noconfirm;
 echo "google chrome installed"
 echo ""
 echo ""
@@ -297,7 +299,7 @@ sleep $SLEEP_TIME;
 echo ""
 echo ""
 echo "installing sublime text 4"
-yay -S sublime-text-4;
+yay -S sublime-text-4 --noconfirm;
 echo "sublime text 4 installed"
 echo ""
 echo ""
@@ -314,7 +316,7 @@ sleep $SLEEP_TIME;
 echo ""
 echo ""
 echo "installing pycharm community"
-yay -S pycharm-community-edition;
+yay -S pycharm-community-edition --noconfirm;
 echo "pycharm community installed"
 echo ""
 echo ""
@@ -618,7 +620,7 @@ sleep $SLEEP_TIME;
 echo ""
 echo ""
 echo "installing vscode"
-yay -S vscode;
+yay -S vscode --noconfirm;
 echo "vscode installed"
 echo ""
 echo ""
@@ -635,7 +637,7 @@ sleep $SLEEP_TIME;
 echo ""
 echo ""
 echo "installing postman"
-yay -S postman;
+yay -S postman --noconfirm;
 echo "postman installed"
 echo ""
 echo ""
@@ -702,7 +704,6 @@ sleep $SLEEP_TIME;
 
 
 
-
 # install_telegram
 echo ""
 echo ""
@@ -715,9 +716,7 @@ sleep $SLEEP_TIME;
 
 
 
-
 ####################################################################################################
-
 
 
 
@@ -725,7 +724,7 @@ sleep $SLEEP_TIME;
 echo ""
 echo ""
 echo "installing ms teams"
-yay -S teams;
+yay -S teams --noconfirm;
 echo "ms teams installed"
 echo ""
 echo ""
@@ -733,9 +732,7 @@ sleep $SLEEP_TIME;
 
 
 
-
 ####################################################################################################
-
 
 
 
@@ -751,35 +748,34 @@ sleep $SLEEP_TIME;
 
 
 
-
 ####################################################################################################
 
 
 
-# generic package management
+# # generic package management
 
-# Upgrade Packages
-echo ""
-echo ""
-echo "updating packages"
-sudo pacman -Syu --noconfirm;
-echo "packages updated"
-echo ""
-echo ""
-sleep $SLEEP_TIME;
+# # Upgrade Packages
+# echo ""
+# echo ""
+# echo "updating packages"
+# sudo pacman -Syu --noconfirm;
+# echo "packages updated"
+# echo ""
+# echo ""
+# sleep $SLEEP_TIME;
 
-# Clean up all local caches. 
-echo ""
-echo ""
-echo "cleaning local caches"
-sudo pacman -Sc;
-echo "local caches cleaned"
-echo ""
-echo ""
-sleep $SLEEP_TIME;
+# # Clean up all local caches.
+# echo ""
+# echo ""
+# echo "cleaning local caches"
+# sudo pacman -Sc;
+# echo "local caches cleaned"
+# echo ""
+# echo ""
+# sleep $SLEEP_TIME;
 
-# Remove dependencies that are no longer needed
-# sudo pacman -Qdtq | sudo pacman -Rs -
+# # Remove dependencies that are no longer needed
+# # sudo pacman -Qdtq | sudo pacman -Rs -
 
 
 
