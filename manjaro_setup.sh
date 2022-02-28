@@ -144,33 +144,6 @@ python3 -m pip install tldr
 
 
 
-# install_nodejs
-sudo pacman -S nodejs npm --noconfirm;
-sudo npm i -g npm
-sudo npm i -g n
-sudo n lts
-
-# install_yarn
-sudo pacman -S yarn --noconfirm;
-
-# install_nvm
-sudo pacman -S nvm --noconfirm;
-
-# add_nvm_entries
-echo '' >> ~/.bashrc;
-echo 'source /usr/share/nvm/init-nvm.sh' >> ~/.bashrc
-echo '' >> ~/.bashrc;
-
-echo '' >> ~/.zshrc;
-echo 'source /usr/share/nvm/init-nvm.sh' >> ~/.zshrc
-echo '' >> ~/.zshrc;
-
-
-
-####################################################################################################
-
-
-
 # install_chromium
 sudo pacman -S chromium --noconfirm;
 
@@ -251,6 +224,36 @@ TARGET_DIRECTORY=$HOME/.oh-my-zsh/custom/
 
 # move aliases.zsh to target directory
 cp $PWD/ohmyzsh/aliases.zsh $TARGET_DIRECTORY;
+
+# restarting just in case
+shutdown -r now;
+
+
+
+####################################################################################################
+
+
+
+# install_nodejs
+sudo pacman -S nodejs npm --noconfirm;
+sudo npm i -g npm
+sudo npm i -g n
+sudo n lts
+
+# install_yarn
+sudo pacman -S yarn --noconfirm;
+
+# install_nvm
+sudo pacman -S nvm --noconfirm;
+
+# add_nvm_entries
+echo '' >> ~/.bashrc;
+echo 'source /usr/share/nvm/init-nvm.sh' >> ~/.bashrc
+echo '' >> ~/.bashrc;
+
+echo '' >> ~/.zshrc;
+echo 'source /usr/share/nvm/init-nvm.sh' >> ~/.zshrc
+echo '' >> ~/.zshrc;
 
 
 
