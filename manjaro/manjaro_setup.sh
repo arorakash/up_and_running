@@ -3,7 +3,7 @@
 
 
 
-SLEEP_TIME=3;
+SLEEP_TIME=2;
 
 
 
@@ -243,56 +243,6 @@ sleep $SLEEP_TIME;
 
 
 
-# install_chrome
-echo ""
-echo ""
-echo "installing google chrome"
-yay -S google-chrome --noconfirm;
-echo "google chrome installed"
-echo ""
-echo ""
-sleep $SLEEP_TIME;
-
-
-
-####################################################################################################
-
-
-
-# install_sublime_text using snap
-# install_sublime_text using yay
-echo ""
-echo ""
-echo "installing sublime text 4"
-yay -S sublime-text-4 --noconfirm;
-echo "sublime text 4 installed"
-echo ""
-echo ""
-sleep $SLEEP_TIME;
-
-
-
-####################################################################################################
-
-
-
-# install_pycharm using snap
-# install_pycharm using yay
-echo ""
-echo ""
-echo "installing pycharm community"
-yay -S pycharm-community-edition --noconfirm;
-echo "pycharm community installed"
-echo ""
-echo ""
-sleep $SLEEP_TIME;
-
-
-
-####################################################################################################
-
-
-
 # change default shell to zsh
 echo ""
 echo ""
@@ -326,7 +276,7 @@ shutdown -r now;
 
 
 
-SLEEP_TIME=3;
+SLEEP_TIME=2;
 
 # install_ohmyzsh
 echo ""
@@ -361,7 +311,7 @@ echo ""
 sleep $SLEEP_TIME;
 
 # restarting just in case
-shutdown -r now;
+# shutdown -r now;
 
 
 
@@ -369,7 +319,7 @@ shutdown -r now;
 
 
 
-SLEEP_TIME=3;
+SLEEP_TIME=2;
 
 # install_nodejs
 echo ""
@@ -460,40 +410,6 @@ sleep $SLEEP_TIME;
 
 
 
-# install_vscode using snap
-# install_vscode using yay
-echo ""
-echo ""
-echo "installing vscode"
-yay -S vscode --noconfirm;
-echo "vscode installed"
-echo ""
-echo ""
-sleep $SLEEP_TIME;
-
-
-
-####################################################################################################
-
-
-
-# install_postman using snap
-# install_postman using yay
-echo ""
-echo ""
-echo "installing postman"
-yay -S postman --noconfirm;
-echo "postman installed"
-echo ""
-echo ""
-sleep $SLEEP_TIME;
-
-
-
-####################################################################################################
-
-
-
 # add user to vboxsf group
 echo ""
 echo ""
@@ -517,6 +433,7 @@ echo "setting gnome behaviour"
 gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize-or-previews';
 gsettings set org.gnome.desktop.wm.keybindings maximize "['<Super>Up']";
 gsettings set org.gnome.desktop.wm.keybindings minimize "['<Super>z']";
+gsettings set org.gnome.nautilus.list-view default-visible-columns "['name', 'date_modified']"
 echo "gnome behaviour set"
 echo ""
 echo ""
@@ -565,12 +482,12 @@ sleep $SLEEP_TIME;
 
 
 
-# install_teams
+# install_other_packages
 echo ""
 echo ""
-echo "installing ms teams"
-yay -S teams --noconfirm;
-echo "ms teams installed"
+echo "installing other packages"
+sudo pacman -S ffmpeg tor variety vlc --noconfirm;
+echo "other packages installed"
 echo ""
 echo ""
 sleep $SLEEP_TIME;
@@ -581,12 +498,96 @@ sleep $SLEEP_TIME;
 
 
 
-# install_other_packages
+# install_vscode using snap
+# install_vscode using yay
 echo ""
 echo ""
-echo "installing other packages"
-sudo pacman -S ffmpeg tor variety vlc --noconfirm;
-echo "other packages installed"
+echo "installing vscode"
+yay -S vscode --noconfirm;
+echo "vscode installed"
+echo ""
+echo ""
+sleep $SLEEP_TIME;
+
+
+
+####################################################################################################
+
+
+
+# install_postman using snap
+# install_postman using yay
+echo ""
+echo ""
+echo "installing postman"
+yay -S postman --noconfirm;
+echo "postman installed"
+echo ""
+echo ""
+sleep $SLEEP_TIME;
+
+
+
+####################################################################################################
+
+
+
+# install_chrome
+echo ""
+echo ""
+echo "installing google chrome"
+yay -S google-chrome --noconfirm;
+echo "google chrome installed"
+echo ""
+echo ""
+sleep $SLEEP_TIME;
+
+
+
+####################################################################################################
+
+
+
+# install_sublime_text using snap
+# install_sublime_text using yay
+echo ""
+echo ""
+echo "installing sublime text 4"
+yay -S sublime-text-4 --noconfirm;
+echo "sublime text 4 installed"
+echo ""
+echo ""
+sleep $SLEEP_TIME;
+
+
+
+####################################################################################################
+
+
+
+# install_pycharm using snap
+# install_pycharm using yay
+echo ""
+echo ""
+echo "installing pycharm community"
+yay -S pycharm-community-edition --noconfirm;
+echo "pycharm community installed"
+echo ""
+echo ""
+sleep $SLEEP_TIME;
+
+
+
+####################################################################################################
+
+
+
+# install_teams
+echo ""
+echo ""
+echo "installing ms teams"
+yay -S teams --noconfirm;
+echo "ms teams installed"
 echo ""
 echo ""
 sleep $SLEEP_TIME;
